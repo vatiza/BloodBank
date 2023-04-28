@@ -20,23 +20,37 @@ class LoginPage extends StatelessWidget {
       elevation: 10,
       ),
       body: Column(
+        crossAxisAlignment:CrossAxisAlignment.start,
         children: [
-      // Padding(
-      //   padding: const EdgeInsets.only(top: 20, ),
-      // ),
       Padding(padding: const EdgeInsets.only(top: 20, right: 400),
       ),
           Text("Login Now",
-       
           style: TextStyle(fontSize: 40,color: Colors.blue,
           fontWeight: FontWeight.w500,
-          
-        
           ),
-        
         ),
+    SizedBox(height: 10,),
+    TextField(
+      decoration: InputDecoration(
+        prefix: Icon(
+          Icons.lock,),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+            
+          ),label: Text("User Id:",
+          style: TextStyle(color: Colors.cyanAccent,),
+          
+          ),
+          hintText: "User Id",hintStyle: TextStyle(color: Colors.black)
+      ),
+    
+    )
+
+
+
+
+
         ],
-        
       ),
     );
   }
